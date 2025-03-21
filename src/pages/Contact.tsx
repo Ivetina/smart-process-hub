@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Phone, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, CheckCircle, MessageSquare, Video } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -49,8 +49,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Adresa</h3>
                     <p className="text-muted-foreground">
-                      Ulica grada Vukovara 269D<br />
-                      10000 Zagreb, Hrvatska
+                      Ulica Narcisa 3<br />
+                      HR-10360 Zagreb-Sesvete<br />
+                      Hrvatska
                     </p>
                   </div>
                 </div>
@@ -61,26 +62,33 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      <a href="mailto:info@mybraindev.com" className="hover:text-primary animated-underline">
-                        info@mybraindev.com
-                      </a><br />
-                      <a href="mailto:support@mybraindev.com" className="hover:text-primary animated-underline">
-                        support@mybraindev.com
+                      <a href="mailto:office@mybraindev.com" className="hover:text-primary animated-underline">
+                        office@mybraindev.com
                       </a>
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Phone className="h-5 w-5" />
+                    <Video className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-medium mb-1">Telefon</h3>
+                    <h3 className="font-medium mb-1">Teams</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+38512345678" className="hover:text-primary animated-underline">
-                        +385 1 234 5678
-                      </a><br />
-                      <a href="tel:+385912345678" className="hover:text-primary animated-underline">
+                      <a href="#" className="hover:text-primary animated-underline">
+                        office@mybraindev.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <MessageSquare className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1">WhatsApp</h3>
+                    <p className="text-muted-foreground">
+                      <a href="#" className="hover:text-primary animated-underline">
                         +385 91 234 5678
                       </a>
                     </p>
@@ -141,7 +149,7 @@ const Contact = () => {
               {/* Map */}
               <div className="rounded-xl overflow-hidden h-64 border border-input">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7974915667935!2d15.990942376959712!3d45.80045837108353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d68b441ce2ff%3A0x54e2a03adf42446e!2sUlica%20grada%20Vukovara%20269D%2C%2010000%2C%20Zagreb!5e0!3m2!1sen!2shr!4v1689089876452!5m2!1sen!2shr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.147266056229!2d16.10662187678996!3d45.81583787900232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d12fae98c6c9%3A0xdb550714d7fdb4ec!2sUl.%20Narcisa%203%2C%2010360%2C%20Sesvete!5e0!3m2!1sen!2shr!4v1715600124135!5m2!1sen!2shr" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 

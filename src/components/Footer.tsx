@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, MessageSquare, Video, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
 import EyeLogo from './EyeLogo';
 
 const Footer = () => {
@@ -114,25 +114,34 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-muted-foreground mr-2 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  Ulica grada Vukovara 269D, 10000 Zagreb, Hrvatska
+                  Ulica Narcisa 3, HR-10360 Zagreb-Sesvete, Hrvatska
                 </span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-muted-foreground mr-2" />
-                <a 
-                  href="tel:+38512345678" 
-                  className="text-sm text-muted-foreground hover:text-foreground animated-underline"
-                >
-                  +385 1 234 5678
-                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-muted-foreground mr-2" />
                 <a 
-                  href="mailto:info@myaidev.com" 
+                  href="mailto:office@mybraindev.com" 
                   className="text-sm text-muted-foreground hover:text-foreground animated-underline"
                 >
-                  info@myaidev.com
+                  office@mybraindev.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Video className="h-5 w-5 text-muted-foreground mr-2" />
+                <a 
+                  href="#" 
+                  className="text-sm text-muted-foreground hover:text-foreground animated-underline"
+                >
+                  Teams
+                </a>
+              </li>
+              <li className="flex items-center">
+                <MessageSquare className="h-5 w-5 text-muted-foreground mr-2" />
+                <a 
+                  href="#" 
+                  className="text-sm text-muted-foreground hover:text-foreground animated-underline"
+                >
+                  WhatsApp
                 </a>
               </li>
             </ul>
