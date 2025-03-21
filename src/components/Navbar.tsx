@@ -53,7 +53,7 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             <span className="text-black">my</span>
-            <span className="text-blue-500">ai</span>
+            <span className="text-primary">ai</span>
           </Link>
 
           {/* Desktop Navigation */}

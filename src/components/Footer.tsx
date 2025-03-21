@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-1 font-display font-bold text-2xl mb-4">
               <span className="text-black">my</span>
-              <span className="text-blue-500">ai</span>
+              <span className="text-primary">ai</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Specijalizirani za AI integraciju u poslovne procese, pomažemo tvrtkama da iskoriste puni potencijal umjetne inteligencije.
