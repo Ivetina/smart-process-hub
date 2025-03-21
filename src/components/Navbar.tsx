@@ -53,7 +53,7 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             <span className="text-primary">my</span>
-            <span className="text-gradient">brain</span>
+            <span className="text-gradient">ai</span>
             <span className="text-primary">dev</span>
           </Link>
 

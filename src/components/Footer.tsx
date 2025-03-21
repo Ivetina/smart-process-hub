@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 font-display font-bold text-xl mb-4">
               <span className="text-primary">my</span>
-              <span className="text-gradient">brain</span>
+              <span className="text-gradient">ai</span>
               <span className="text-primary">dev</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
@@ -126,10 +126,10 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-muted-foreground mr-2" />
                 <a 
-                  href="mailto:info@mybraindev.com" 
+                  href="mailto:info@myaidev.com" 
                   className="text-sm text-muted-foreground hover:text-foreground animated-underline"
                 >
-                  info@mybraindev.com
+                  info@myaidev.com
                 </a>
               </li>
             </ul>
@@ -139,7 +139,7 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {currentYear} mybraindev.com. Sva prava pridržana.
+              &copy; {currentYear} myaidev.com. Sva prava pridržana.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link 
