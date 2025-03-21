@@ -49,12 +49,11 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center gap-2 font-display font-bold text-xl md:text-2xl"
+            className="flex items-center gap-1 font-display font-bold text-2xl md:text-4xl"
             onClick={closeMenu}
           >
-            <span className="text-primary">my</span>
-            <span className="text-gradient">ai</span>
-            <span className="text-primary">dev</span>
+            <span className="text-black">my</span>
+            <span className="text-blue-500">ai</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -12,10 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Column 1 - Logo and info */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 font-display font-bold text-xl mb-4">
-              <span className="text-primary">my</span>
-              <span className="text-gradient">ai</span>
-              <span className="text-primary">dev</span>
+            <Link to="/" className="flex items-center gap-1 font-display font-bold text-2xl mb-4">
+              <span className="text-black">my</span>
+              <span className="text-blue-500">ai</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Specijalizirani za AI integraciju u poslovne procese, pomažemo tvrtkama da iskoriste puni potencijal umjetne inteligencije.
