@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import EyeLogo from './EyeLogo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +13,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Column 1 - Logo and info */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-1 font-display font-bold text-2xl mb-4">
-              <span className="text-black">my</span>
-              <span className="text-primary">ai</span>
+            <Link to="/" className="flex items-center gap-1 mb-4">
+              <EyeLogo className="w-12 h-8" />
+              <span className="font-display font-bold text-2xl">
+                <span className="text-black">my</span>
+                <span className="text-primary">ai</span>
+              </span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Specijalizirani za AI integraciju u poslovne procese, pomažemo tvrtkama da iskoriste puni potencijal umjetne inteligencije.

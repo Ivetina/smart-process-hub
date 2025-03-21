@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import EyeLogo from './EyeLogo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,11 +50,14 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center gap-1 font-display font-bold text-2xl md:text-4xl"
+            className="flex items-center gap-1"
             onClick={closeMenu}
           >
-            <span className="text-black">my</span>
-            <span className="text-primary">ai</span>
+            <EyeLogo className="w-16 h-12 md:w-20 md:h-14" /> {/* 50% larger than base size */}
+            <span className="font-display font-bold text-2xl md:text-4xl">
+              <span className="text-black">my</span>
+              <span className="text-primary">ai</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
