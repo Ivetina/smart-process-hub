@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import EyeLogo from './EyeLogo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,6 +14,7 @@ const Footer = () => {
           {/* Column 1 - Logo and info */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-1 mb-4">
+              <EyeLogo className="w-12 h-8" />
               <span className="font-display font-bold text-2xl">
                 <span className="text-black">my</span>
                 <span className="text-primary">ai</span>
