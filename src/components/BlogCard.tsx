@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Calendar } from 'lucide-react';
+import { useBlogPosts } from '@/hooks/useBlogPosts';
 
 interface BlogCardProps {
   title: string;
@@ -11,14 +12,22 @@ interface BlogCardProps {
   date: string;
   slug: string;
   categories: string[];
+  id?: number;
 }
 
-const BlogCard = ({ title, excerpt, image, date, slug, categories }: BlogCardProps) => {
+const BlogCard = ({ title, excerpt, image, date, slug, categories, id }: BlogCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { updatePostClicks } = useBlogPosts();
+  
+  const handleClick = () => {
+    if (id) {
+      updatePostClicks(id);
+    }
+  };
   
   return (
     <article className="glass-card rounded-xl overflow-hidden hover-card transition-all duration-300">
-      <Link to={`/blog/${slug}`} className="block">
+      <Link to={`/blog/${slug}`} className="block" onClick={handleClick}>
         <div className="relative aspect-video overflow-hidden">
           <img
             src={image}
@@ -48,7 +57,7 @@ const BlogCard = ({ title, excerpt, image, date, slug, categories }: BlogCardPro
             <time dateTime={date}>{date}</time>
           </div>
         </div>
-        <Link to={`/blog/${slug}`} className="group">
+        <Link to={`/blog/${slug}`} className="group" onClick={handleClick}>
           <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
             {title}
           </h3>
