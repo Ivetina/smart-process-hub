@@ -2,7 +2,7 @@
 import { BlogPost } from "@/types/BlogTypes";
 
 // API ključ za autorizaciju
-const API_KEY = "admin-api-key-2024";
+export const API_KEY = "admin-api-key-2024";
 
 // Pomoćna funkcija za provjeru API ključa
 export const validateApiKey = (key: string): boolean => {

@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useMemo } from 'react';
 import { BlogPost } from '@/types/BlogTypes';
 import { useToast } from "@/components/ui/use-toast";
@@ -226,5 +225,5 @@ export const useAdminBlogPosts = () => {
   };
 };
 
-// Export API ključ za pristup
+// Correct export of API_KEY from blogApi
 export const { API_KEY } = blogApi;

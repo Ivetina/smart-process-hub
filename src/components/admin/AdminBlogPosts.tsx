@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Card, 
@@ -19,7 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/components/ui/use-toast";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { publishScheduledPosts, API_KEY } from '@/api/blogApi';
+import { publishScheduledPosts } from '@/api/blogApi';
+import { API_KEY } from '@/hooks/useAdminBlogPosts';
 
 const AdminBlogPosts = () => {
   const {
@@ -54,7 +54,6 @@ const AdminBlogPosts = () => {
   const [scheduledDate, setScheduledDate] = useState('');
   const { toast } = useToast();
 
-  // Funkcija za automatsko objavljivanje zakazanih članaka
   const checkAndPublishScheduledPosts = () => {
     const publishedPosts = publishScheduledPosts(apiKey);
     
@@ -66,11 +65,9 @@ const AdminBlogPosts = () => {
     }
   };
 
-  // Provjera zakazanih članaka pri učitavanju
   useEffect(() => {
     checkAndPublishScheduledPosts();
     
-    // Postaviti interval za provjeru svakih 12 sati
     const interval = setInterval(checkAndPublishScheduledPosts, 12 * 60 * 60 * 1000);
     
     return () => clearInterval(interval);
