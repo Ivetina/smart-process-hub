@@ -1,6 +1,8 @@
+
 import { useState, useEffect, useMemo } from 'react';
 import { BlogPost } from '@/types/BlogTypes';
 import { useToast } from "@/components/ui/use-toast";
+import * as blogApi from '@/api/blogApi';
 
 // Demo blog posts data - u pravoj aplikaciji, ovi bi podaci došli s backenda
 const initialBlogPosts: BlogPost[] = [
@@ -186,6 +188,24 @@ export const useAdminBlogPosts = () => {
     });
   };
 
+  // Funkcija za zakazivanje objave članka
+  const scheduleBlogPost = (id: number, publishDate: string): boolean => {
+    const post = blogPosts.find(post => post.id === id);
+    if (!post) return false;
+    
+    const updatedPost = {
+      ...post,
+      scheduledPublishDate: publishDate,
+      published: false // Postavljamo na false dok se ne objavi
+    };
+    
+    setBlogPosts(blogPosts.map(p => 
+      p.id === id ? updatedPost : p
+    ));
+    
+    return true;
+  };
+
   return {
     blogPosts,
     sortedBlogPosts,
@@ -201,6 +221,10 @@ export const useAdminBlogPosts = () => {
     setSelectedCategories,
     publishedFilter,
     setPublishedFilter,
-    availableCategories
+    availableCategories,
+    scheduleBlogPost
   };
 };
+
+// Export API ključ za pristup
+export const { API_KEY } = blogApi;
