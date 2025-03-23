@@ -25,7 +25,12 @@ const AdminBlogPosts = () => {
     handleDeletePost,
     handleUpdatePost,
     handleAddPost,
-    togglePublishStatus
+    togglePublishStatus,
+    selectedCategories,
+    setSelectedCategories,
+    publishedFilter,
+    setPublishedFilter,
+    availableCategories
   } = useAdminBlogPosts();
   
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -91,7 +96,12 @@ const AdminBlogPosts = () => {
         <CardContent>
           <BlogPostsSearch 
             searchQuery={searchQuery} 
-            setSearchQuery={setSearchQuery} 
+            setSearchQuery={setSearchQuery}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            publishedFilter={publishedFilter}
+            setPublishedFilter={setPublishedFilter}
+            availableCategories={availableCategories}
           />
           
           <BlogPostsTable 

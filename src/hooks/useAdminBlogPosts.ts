@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { BlogPost } from '@/types/BlogTypes';
 import { useToast } from "@/components/ui/use-toast";
 
@@ -67,10 +66,22 @@ export const useAdminBlogPosts = () => {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [sortConfig, setSortConfig] = useState<{key: keyof BlogPost, direction: 'asc' | 'desc'} | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [publishedFilter, setPublishedFilter] = useState<'all' | 'published' | 'drafts'>('all');
   const { toast } = useToast();
 
   useEffect(() => {
     localStorage.setItem('admin-blog-posts', JSON.stringify(blogPosts));
+  }, [blogPosts]);
+
+  const availableCategories = useMemo(() => {
+    const categoriesSet = new Set<string>();
+    blogPosts.forEach(post => {
+      post.categories.forEach(category => {
+        categoriesSet.add(category);
+      });
+    });
+    return Array.from(categoriesSet).sort();
   }, [blogPosts]);
 
   const handleSortClick = (key: keyof BlogPost) => {
@@ -83,25 +94,38 @@ export const useAdminBlogPosts = () => {
     setSortConfig({ key, direction });
   };
 
-  const sortedBlogPosts = [...blogPosts]
-    .filter(post => 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.categories.some(category => 
-        category.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    )
-    .sort((a, b) => {
-      if (!sortConfig) return 0;
-      
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === 'asc' ? -1 : 1;
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === 'asc' ? 1 : -1;
-      }
-      return 0;
-    });
+  const sortedBlogPosts = useMemo(() => {
+    return [...blogPosts]
+      .filter(post => {
+        const matchesSearch = 
+          post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          post.categories.some(category => 
+            category.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+        
+        const matchesCategories = selectedCategories.length === 0 || 
+          post.categories.some(category => selectedCategories.includes(category));
+        
+        const matchesStatus = 
+          publishedFilter === 'all' || 
+          (publishedFilter === 'published' && post.published) || 
+          (publishedFilter === 'drafts' && !post.published);
+        
+        return matchesSearch && matchesCategories && matchesStatus;
+      })
+      .sort((a, b) => {
+        if (!sortConfig) return 0;
+        
+        if (a[sortConfig.key] < b[sortConfig.key]) {
+          return sortConfig.direction === 'asc' ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === 'asc' ? 1 : -1;
+        }
+        return 0;
+      });
+  }, [blogPosts, searchQuery, sortConfig, selectedCategories, publishedFilter]);
 
   const handleDeletePost = (id: number) => {
     if (confirm('Jeste li sigurni da želite izbrisati ovaj članak?')) {
@@ -172,6 +196,11 @@ export const useAdminBlogPosts = () => {
     handleDeletePost,
     handleUpdatePost,
     handleAddPost,
-    togglePublishStatus
+    togglePublishStatus,
+    selectedCategories,
+    setSelectedCategories,
+    publishedFilter,
+    setPublishedFilter,
+    availableCategories
   };
 };
