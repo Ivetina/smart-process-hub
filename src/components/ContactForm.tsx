@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
+// Konfiguracijska konstanta za n8n webhook
+const WEBHOOK_URL = "http://162.55.36.239:5678/webhook/unesi-klijenta";
+
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -18,25 +21,74 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Formatiranje podataka prema traženom predlošku
+    const postData = {
+      naziv: formData.company || "Nije navedeno",
+      kontakt_osoba: formData.name,
+      email: formData.email,
+      telefon: "", // Nije dostupno u trenutnoj formi
+      web: "", // Nije dostupno u trenutnoj formi
+      poruka: formData.message,
+      Status: "novi",
+      Status_2: "kupac",
+      prioritet: "srednji",
+      source: "web_forma",
+      datum_kreiranja: new Date().toISOString(),
+      napomena: "",
+      ai_rezime: null,
+      ai_odgovor: null,
+      je_ai_odgovorio: false
+    };
+
+    try {
+      console.log("Šaljem podatke na webhook:", postData);
+      
+      // Poziv na n8n webhook
+      const response = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
+      });
+
+      if (response.ok) {
+        console.log("Podaci uspješno poslani");
+        toast({
+          title: "Uspješno poslano!",
+          description: "Vaš upit je zaprimljen. Kontaktirat ćemo vas uskoro.",
+        });
+        
+        // Reset forme nakon uspješnog slanja
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: '',
+          service: 'development'
+        });
+      } else {
+        console.error("Greška prilikom slanja:", await response.text());
+        toast({
+          title: "Greška",
+          description: "Došlo je do problema prilikom slanja upita. Molimo pokušajte ponovno kasnije.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error("Greška u komunikaciji:", error);
       toast({
-        title: "Poruka je poslana!",
-        description: "Vaš upit je uspješno zaprimljen. Javit ćemo vam se uskoro.",
+        title: "Nije moguće poslati",
+        description: "Problem u komunikaciji s poslužiteljem. Provjerite svoju internetsku vezu.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: '',
-        service: 'development'
-      });
-    }, 1000);
+    }
   };
 
   return (
