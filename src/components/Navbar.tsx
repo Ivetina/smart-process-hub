@@ -53,11 +53,7 @@ const Navbar = () => {
             className="flex items-center gap-1"
             onClick={closeMenu}
           >
-            <EyeLogo className="w-16 h-12 md:w-20 md:h-14" /> {/* 50% larger than base size */}
-            <span className="font-display font-bold text-2xl md:text-4xl">
-              <span className="text-black">my</span>
-              <span className="text-primary">ai</span>
-            </span>
+            <EyeLogo className="w-16 h-12 md:w-auto md:h-14" />
           </Link>
 
           {/* Desktop Navigation */}
