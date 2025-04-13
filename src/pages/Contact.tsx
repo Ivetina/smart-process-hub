@@ -48,8 +48,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      <a href="mailto:office@mybraindev.com" className="hover:text-primary animated-underline">
-                        office@mybraindev.com
+                      <a href="mailto:myoffice@mybraindev.com" className="hover:text-primary animated-underline">
+                        myoffice@mybraindev.com
                       </a>
                     </p>
                   </div>
@@ -61,8 +61,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Teams</h3>
                     <p className="text-muted-foreground">
-                      <a href="#" className="hover:text-primary animated-underline">
-                        office@mybraindev.com
+                      <a href="mailto:myoffice@mybraindev.com" className="hover:text-primary animated-underline">
+                        myoffice@mybraindev.com
                       </a>
                     </p>
                   </div>
