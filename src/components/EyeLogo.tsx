@@ -16,7 +16,7 @@ const EyeLogo: React.FC<EyeLogoProps> = ({ className }) => {
       />
       <span className="font-display font-bold text-2xl md:text-4xl ml-1">
         <span className="text-black">my</span>
-        <span className="text-blue-500">br<span className="text-blue-500 relative">ai<span className="absolute inset-0 text-transparent" style={{ WebkitTextStroke: '2px black' }}>ai</span></span>n</span>
+        <span className="text-blue-500">br<span className="text-blue-500 relative">ai<span className="absolute inset-0 text-transparent" style={{ WebkitTextStroke: '1px black' }}>ai</span></span>n</span>
         <span className="text-orange-500">dev</span>
       </span>
     </div>
