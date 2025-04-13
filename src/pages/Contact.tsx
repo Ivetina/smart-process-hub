@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Phone, Video, Clock, CheckCircle, MessageSquare } from 'lucide-react';
+import { Mail, Video, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -78,56 +78,6 @@ const Contact = () => {
                         +385 91 234 5678
                       </a>
                     </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Radno vrijeme</h3>
-                    <p className="text-muted-foreground">
-                      Ponedjeljak - Petak: 9:00 - 17:00<br />
-                      Subota - Nedjelja: Zatvoreno
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="glass-card rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold mb-4">Zašto nas kontaktirati?</h3>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5" />
-                    <div>
-                      <p className="text-muted-foreground">
-                        Besplatna inicijalna konzultacija za procjenu vaših potreba
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5" />
-                    <div>
-                      <p className="text-muted-foreground">
-                        Stručni tim s višegodišnjim iskustvom u AI i poslovnim procesima
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5" />
-                    <div>
-                      <p className="text-muted-foreground">
-                        Brz odgovor na vaš upit, obično unutar 24 sata
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5" />
-                    <div>
-                      <p className="text-muted-foreground">
-                        Personalizirani pristup prilagođen vašim specifičnim potrebama
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
