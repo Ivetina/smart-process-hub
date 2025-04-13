@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Phone, MapPin, Clock, CheckCircle, MessageSquare, Video } from 'lucide-react';
+import { Mail, Phone, Video, Clock, CheckCircle, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -42,19 +41,6 @@ const Contact = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Naši kontakt podaci</h2>
               
               <div className="space-y-6 mb-8">
-                <div className="flex items-start">
-                  <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Adresa</h3>
-                    <p className="text-muted-foreground">
-                      Ulica Narcisa 3<br />
-                      HR-10360 Zagreb-Sesvete<br />
-                      Hrvatska
-                    </p>
-                  </div>
-                </div>
                 <div className="flex items-start">
                   <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Mail className="h-5 w-5" />
@@ -144,20 +130,6 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Map */}
-              <div className="rounded-xl overflow-hidden h-64 border border-input">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.147266056229!2d16.10662187678996!3d45.81583787900232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d12fae98c6c9%3A0xdb550714d7fdb4ec!2sUl.%20Narcisa%203%2C%2010360%2C%20Sesvete!5e0!3m2!1sen!2shr!4v1715600124135!5m2!1sen!2shr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Office location"
-                />
               </div>
             </div>
             
