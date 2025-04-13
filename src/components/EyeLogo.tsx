@@ -12,18 +12,16 @@ const EyeLogo: React.FC<EyeLogoProps> = ({ className }) => {
       <img 
         src="/lovable-uploads/ac39d093-94a6-435e-b85e-ad5fc1c2ccfa.png" 
         alt="AI Eye" 
-        className="w-[40%] object-contain mb-1"
+        className="w-[45%] object-contain mb-1"  // Reduced width by 10% from w-1/2
       />
-      <div className="flex flex-col items-center">
-        <span className="font-display font-bold text-2xl md:text-4xl w-full text-center">
-          <span className="text-black">my</span>
-          <span className="text-blue-500">brain</span>
-          <span className="text-orange-500">dev</span>
-        </span>
-        <span className="text-lg text-gray-600 mt-2">Povežimo se i razgovarajmo o vašim AI potrebama</span>
-      </div>
+      <span className="font-display font-bold text-2xl md:text-4xl w-full text-center">
+        <span className="text-black">my</span>
+        <span className="text-blue-500">br<span className="text-blue-500 relative">ai<span className="absolute inset-0 text-transparent" style={{ WebkitTextStroke: '1px #8E9196' }}>ai</span></span>n</span>
+        <span className="text-orange-500">dev</span>
+      </span>
     </div>
   );
 };
 
 export default EyeLogo;
+
