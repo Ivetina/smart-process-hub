@@ -12,7 +12,7 @@ const EyeLogo: React.FC<EyeLogoProps> = ({ className }) => {
       <img 
         src="/lovable-uploads/ac39d093-94a6-435e-b85e-ad5fc1c2ccfa.png" 
         alt="AI Eye" 
-        className="w-1/2 object-contain mb-1"  // Changed w-full to w-1/2 to reduce size by 50%
+        className="w-[45%] object-contain mb-1"  // Reduced width by 10% from w-1/2
       />
       <span className="font-display font-bold text-2xl md:text-4xl w-full text-center">
         <span className="text-black">my</span>
@@ -24,3 +24,4 @@ const EyeLogo: React.FC<EyeLogoProps> = ({ className }) => {
 };
 
 export default EyeLogo;
+
