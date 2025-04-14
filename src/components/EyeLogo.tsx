@@ -9,11 +9,6 @@ interface EyeLogoProps {
 const EyeLogo: React.FC<EyeLogoProps> = ({ className }) => {
   return (
     <div className={cn("relative flex flex-col items-center", className)}>
-      <img 
-        src="/lovable-uploads/ac39d093-94a6-435e-b85e-ad5fc1c2ccfa.png" 
-        alt="AI Eye" 
-        className="w-1/2 object-contain mb-1"  // Changed w-full to w-1/2 to reduce size by 50%
-      />
       <span className="font-display font-bold text-2xl md:text-4xl w-full text-center">
         <span className="text-black">my</span>
         <span className="text-blue-500">br<span className="text-blue-500 relative">ai<span className="absolute inset-0 text-transparent" style={{ WebkitTextStroke: '1px #8E9196' }}>ai</span></span>n</span>
