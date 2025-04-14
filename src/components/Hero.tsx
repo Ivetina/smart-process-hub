@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, ChevronDown } from 'lucide-react';
+import EyeLogo from './EyeLogo';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -63,6 +64,11 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center min-h-[90vh] py-16 md:py-20">
+          {/* Logo with added margin at bottom */}
+          <div className="mb-8">
+            <EyeLogo className="w-40 md:w-48" />
+          </div>
+          
           {/* Chip */}
           <div 
             className="animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 bg-blue-100 text-blue-800 rounded-full px-4 py-1 text-sm font-medium mb-6 delay-100"
