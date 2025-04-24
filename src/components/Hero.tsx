@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, ChevronDown } from 'lucide-react';
@@ -43,15 +42,6 @@ const Hero = () => {
 
   return (
     <div className="relative overflow-hidden pt-20 md:pt-0" ref={heroRef}>
-      {/* Digital background image with 25% opacity */}
-      <div className="absolute inset-0 -z-20">
-        <img 
-          src="/lovable-uploads/5db941d9-ba09-4a81-96f7-bd71952caf36.png" 
-          alt="Digital data tunnel"
-          className="w-full h-full object-cover opacity-25"
-        />
-      </div>
-      
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/80 to-white/80 -z-10" />
       
