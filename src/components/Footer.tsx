@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Column 1 - Logo and info */}
           <div className="md:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <EyeLogo className="w-40 h-8" />
+              <EyeLogo className="w-40 h-8 whitespace-nowrap" />
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
               Specijalizirani za AI integraciju u poslovne procese, pomažemo tvrtkama da iskoriste puni potencijal umjetne inteligencije.
