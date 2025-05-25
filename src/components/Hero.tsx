@@ -60,7 +60,7 @@ const Hero = () => {
           <div 
             className="animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 bg-blue-100 text-blue-800 rounded-full px-4 py-1 text-sm font-medium mb-6 delay-100"
           >
-            AI Integracija za poslovne procese
+            AI Integracija u poslovne procese
           </div>
           
           {/* Main Heading */}
