@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MessageSquare, Video, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, MessageSquare, Video, Linkedin, Twitter, Facebook } from 'lucide-react';
 import EyeLogo from './EyeLogo';
 
 const Footer = () => {
@@ -106,12 +106,6 @@ const Footer = () => {
               Kontakt
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-muted-foreground mr-2 mt-0.5" />
-                <span className="text-sm text-muted-foreground">
-                  Ulica Narcisa 3, HR-10360 Zagreb-Sesvete, Hrvatska
-                </span>
-              </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-muted-foreground mr-2" />
                 <a 
