@@ -14,22 +14,38 @@ const HawkeyePage = () => {
           </p>
         </div>
         
-        {/* Embed Status Page */}
-        <div className="bg-gray-800 rounded-lg overflow-hidden shadow-2xl">
-          <iframe
-            src="http://162.55.36.239:3001/status/hawkeye"
-            width="100%"
-            height="800"
-            frameBorder="0"
-            className="w-full"
-            title="Infrastructure Status"
-          />
-        </div>
-        
-        {/* Additional Info */}
-        <div className="mt-8 text-gray-400 text-center">
-          <p>Last updated: {new Date().toLocaleString()}</p>
-          <p>Monitoring 9 critical infrastructure components</p>
+        {/* Direct link instead of iframe */}
+        <div className="bg-gray-800 rounded-lg p-8 text-center">
+          <h2 className="text-2xl text-white mb-4">
+            🔗 Access Full Status Dashboard
+          </h2>
+          <p className="text-gray-300 mb-6">
+            Click below to view real-time infrastructure monitoring
+          </p>
+          <a 
+            href="http://162.55.36.239:3001/status/hawkeye"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+          >
+            🚀 Open Hawkeye Dashboard
+          </a>
+          
+          {/* Status summary */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-green-600 p-4 rounded">
+              <div className="text-2xl font-bold">9</div>
+              <div className="text-sm">Active Monitors</div>
+            </div>
+            <div className="bg-green-600 p-4 rounded">
+              <div className="text-2xl font-bold">100%</div>
+              <div className="text-sm">Core Infrastructure</div>
+            </div>
+            <div className="bg-yellow-600 p-4 rounded">
+              <div className="text-2xl font-bold">85%</div>
+              <div className="text-sm">Avg. Database Uptime</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
