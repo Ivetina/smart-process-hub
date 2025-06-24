@@ -15,12 +15,12 @@ const ApiGateway = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-50 font-sans">
+      <div className="min-h-screen bg-gray-50 font-sans pt-16">
         <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-purple-800 text-white p-8 text-center">
-            <h1 className="text-4xl font-bold mb-2">MyBrainDev API Gateway</h1>
-            <p className="text-lg opacity-90">Kompletni vodič za korištenje API endpoints-a</p>
+          <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-purple-800 text-white p-6 text-center">
+            <h1 className="text-3xl font-bold mb-2">MyBrainDev API Gateway</h1>
+            <p className="text-base opacity-90">Kompletni vodič za korištenje API endpoints-a</p>
           </div>
           
           <div className="p-8">
