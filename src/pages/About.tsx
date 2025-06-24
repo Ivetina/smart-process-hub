@@ -159,7 +159,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                name: "Ivan Horvat",
+                name: "Ivica Baćak",
                 position: "Osnivač i CEO",
                 bio: "Stručnjak za AI s više od 10 godina iskustva u implementaciji AI rješenja za poslovne procese.",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
