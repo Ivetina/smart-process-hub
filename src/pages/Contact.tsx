@@ -1,7 +1,8 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Video, MessageSquare } from 'lucide-react';
+import { Mail, Video, MessageSquare, Phone } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -56,6 +57,19 @@ const Contact = () => {
                 </div>
                 <div className="flex items-start">
                   <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium mb-1">Telefon</h3>
+                    <p className="text-muted-foreground">
+                      <a href="tel:+385992082866" className="hover:text-primary animated-underline">
+                        +385 99 208 28 66
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-4 flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Video className="h-5 w-5" />
                   </div>
                   <div>
@@ -74,8 +88,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">WhatsApp</h3>
                     <p className="text-muted-foreground">
-                      <a href="#" className="hover:text-primary animated-underline">
-                        +385 91 234 5678
+                      <a href="https://wa.me/385992082866" className="hover:text-primary animated-underline">
+                        +385 99 208 28 66
                       </a>
                     </p>
                   </div>
