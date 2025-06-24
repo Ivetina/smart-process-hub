@@ -101,10 +101,10 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Column 4 - Contact & Infrastructure */}
+          {/* Column 4 - Contact */}
           <div>
             <h3 className="font-medium text-sm text-muted-foreground uppercase tracking-wider mb-4">
-              Kontakt & Infrastruktura
+              Kontakt
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center">
@@ -133,22 +133,6 @@ const Footer = () => {
                 >
                   WhatsApp
                 </a>
-              </li>
-              <li>
-                <Link 
-                  to="/hawkeye"
-                  className="text-sm text-muted-foreground hover:text-foreground animated-underline"
-                >
-                  🦅 Hawkeye Status
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/apigateway"
-                  className="text-sm text-muted-foreground hover:text-foreground animated-underline"
-                >
-                  🌐 API Gateway
-                </Link>
               </li>
             </ul>
           </div>
