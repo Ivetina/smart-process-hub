@@ -26,12 +26,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrolled]);
 
-  // Navigation items
+  // Navigation items - removed "Shop"
   const navItems = [
     { name: 'Početna', path: '/' },
     { name: 'Usluge', path: '/services' },
     { name: 'O nama', path: '/about' },
-    { name: 'Shop', path: '/shop' },
     { name: 'Blog', path: '/blog' },
     { name: 'Kontakt', path: '/contact' },
   ];
