@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -168,7 +167,7 @@ const About = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Ivica Baćak</h3>
                 <p className="text-primary font-medium text-sm mb-3">Osnivač i CEO</p>
-                <p className="text-muted-foreground">Stručnjak za AI rješenja s više od 30 godina iskustva u implementaciji IT rješenja za poslovne procese.</p>
+                <p className="text-muted-foreground">Stručnjak za AI i IT rješenja s više od 30 godina međunarodnog iskustva u optimizaciji poslovnih procesa kroz napredne informatičke sustave, uključujući rad na zahtjevnim projektima i u inovativnim razvojnim okruženjima.</p>
               </div>
             </div>
             
