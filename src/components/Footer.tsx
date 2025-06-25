@@ -60,7 +60,6 @@ const Footer = () => {
                 { name: 'Početna', path: '/' },
                 { name: 'Usluge', path: '/services' },
                 { name: 'O nama', path: '/about' },
-                { name: 'Shop', path: '/shop' },
                 { name: 'Blog', path: '/blog' },
                 { name: 'Kontakt', path: '/contact' },
               ].map((item) => (
