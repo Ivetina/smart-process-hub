@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,7 +8,8 @@ import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
 import AdminBlogPosts from "@/components/admin/AdminBlogPosts";
 import AdminDashboard from "@/components/admin/AdminDashboard";
-import AdminInfrastructure from "@/components/admin/AdminInfrastructure";
+import HawkeyeComponent from "@/components/admin/HawkeyeComponent";
+import ApiGatewayComponent from "@/components/admin/ApiGatewayComponent";
 
 const Admin = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -122,7 +122,9 @@ const Admin = () => {
             <TabsList className="mb-6">
               <TabsTrigger value="dashboard">Nadzorna ploča</TabsTrigger>
               <TabsTrigger value="blog-posts">Blog članci</TabsTrigger>
-              <TabsTrigger value="infrastructure">Infrastruktura</TabsTrigger>
+              <TabsTrigger value="portainer">Portainer</TabsTrigger>
+              <TabsTrigger value="hawkeye">Hawkeye</TabsTrigger>
+              <TabsTrigger value="api-gateway">API Gateway</TabsTrigger>
               <TabsTrigger value="statistics">Statistika</TabsTrigger>
             </TabsList>
             
@@ -134,8 +136,33 @@ const Admin = () => {
               <AdminBlogPosts />
             </TabsContent>
             
-            <TabsContent value="infrastructure">
-              <AdminInfrastructure />
+            <TabsContent value="portainer">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Portainer - Docker Container Management</CardTitle>
+                  <CardDescription>
+                    Upravljanje Docker kontejnerima i uslugama
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="h-[800px]">
+                    <iframe
+                      src="http://162.55.36.239:9000"
+                      className="w-full h-full border-0"
+                      title="Portainer"
+                      style={{ background: 'white' }}
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="hawkeye">
+              <HawkeyeComponent />
+            </TabsContent>
+            
+            <TabsContent value="api-gateway">
+              <ApiGatewayComponent />
             </TabsContent>
             
             <TabsContent value="statistics">
