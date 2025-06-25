@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { Server, Eye, Database, LogOut } from 'lucide-react';
+import Hawkeye from '../../pages/Hawkeye';
+import ApiGateway from '../../pages/ApiGateway';
 
 const AdminInfrastructure = () => {
   const [activeTab, setActiveTab] = useState('portainer');
@@ -15,22 +17,22 @@ const AdminInfrastructure = () => {
       id: 'portainer',
       name: 'Portainer',
       icon: <Server className="w-4 h-4" />,
-      url: 'http://162.55.36.239:9000',
-      description: 'Docker Container Management'
+      description: 'Docker Container Management',
+      component: <div className="p-8 text-center text-white">Portainer funkcionalnost će biti implementirana uskoro</div>
     },
     {
       id: 'hawkeye',
       name: 'Hawkeye',
       icon: <Eye className="w-4 h-4" />,
-      url: 'http://162.55.36.239:8080',
-      description: 'Infrastructure Monitoring'
+      description: 'Infrastructure Monitoring',
+      component: <Hawkeye />
     },
     {
       id: 'apigateway',
       name: 'API Gateway',
       icon: <Database className="w-4 h-4" />,
-      url: 'http://162.55.36.239:8000',
-      description: 'Supabase API Gateway'
+      description: 'Supabase API Gateway',
+      component: <ApiGateway />
     }
   ];
 
@@ -89,7 +91,6 @@ const AdminInfrastructure = () => {
                 <div className="flex items-center space-x-4">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-gray-300">{tab.description}</span>
-                  <span className="text-sm text-gray-400">→ {tab.url}</span>
                 </div>
                 <div className="text-xs text-green-400 font-medium">ONLINE</div>
               </div>
@@ -98,19 +99,13 @@ const AdminInfrastructure = () => {
         </div>
       </div>
 
-      {/* Main Content - Iframe */}
-      <div className="h-[calc(100vh-180px)]">
+      {/* Main Content - Components instead of iframe */}
+      <div className="h-[calc(100vh-180px)] overflow-auto">
         {tabs.map((tab) => (
           activeTab === tab.id && (
-            <iframe
-              key={tab.id}
-              src={tab.url}
-              className="w-full h-full border-0"
-              title={tab.name}
-              style={{
-                background: 'white'
-              }}
-            />
+            <div key={tab.id} className="h-full">
+              {tab.component}
+            </div>
           )
         ))}
       </div>
@@ -120,7 +115,7 @@ const AdminInfrastructure = () => {
         <div className="bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 text-white text-sm border border-white/20">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span>Učitava {tabs.find(tab => tab.id === activeTab)?.name}...</span>
+            <span>Prikazuje {tabs.find(tab => tab.id === activeTab)?.name}...</span>
           </div>
         </div>
       </div>
