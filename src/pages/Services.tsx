@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
@@ -99,7 +98,7 @@ const Services = () => {
     {
       name: "Docker",
       description: "Kontejnerizacija aplikacija",
-      image: "https://images.unsplash.com/photo-1605745341112-85968b19335a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/e97a810f-c064-4266-b86b-9c6dc041ee3e.png"
     },
     {
       name: "GitHub",
