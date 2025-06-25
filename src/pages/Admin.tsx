@@ -9,7 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { Loader2 } from "lucide-react";
 import AdminBlogPosts from "@/components/admin/AdminBlogPosts";
 import AdminDashboard from "@/components/admin/AdminDashboard";
-import { Navigate } from 'react-router-dom';
+import AdminInfrastructure from "@/components/admin/AdminInfrastructure";
 
 const Admin = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -122,6 +122,7 @@ const Admin = () => {
             <TabsList className="mb-6">
               <TabsTrigger value="dashboard">Nadzorna ploča</TabsTrigger>
               <TabsTrigger value="blog-posts">Blog članci</TabsTrigger>
+              <TabsTrigger value="infrastructure">Infrastruktura</TabsTrigger>
               <TabsTrigger value="statistics">Statistika</TabsTrigger>
             </TabsList>
             
@@ -131,6 +132,10 @@ const Admin = () => {
             
             <TabsContent value="blog-posts">
               <AdminBlogPosts />
+            </TabsContent>
+            
+            <TabsContent value="infrastructure">
+              <AdminInfrastructure />
             </TabsContent>
             
             <TabsContent value="statistics">
