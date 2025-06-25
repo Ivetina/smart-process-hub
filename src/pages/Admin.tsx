@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -139,19 +140,42 @@ const Admin = () => {
             <TabsContent value="portainer">
               <Card>
                 <CardHeader>
-                  <CardTitle>Portainer - Docker Container Management</CardTitle>
+                  <CardTitle>🐳 Portainer - Docker Container Management</CardTitle>
                   <CardDescription>
                     Upravljanje Docker kontejnerima i uslugama
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-0">
-                  <div className="h-[800px]">
-                    <iframe
-                      src="http://162.55.36.239:9000"
-                      className="w-full h-full border-0"
-                      title="Portainer"
-                      style={{ background: 'white' }}
-                    />
+                <CardContent>
+                  <div className="bg-gray-800 rounded-lg p-8 text-center">
+                    <h2 className="text-2xl text-white mb-4">
+                      🔗 Pristup Portainer Dashboard-u
+                    </h2>
+                    <p className="text-gray-300 mb-6">
+                      Kliknite ispod za pristup Docker container management sustavu
+                    </p>
+                    <a 
+                      href="http://162.55.36.239:9000"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors text-lg font-semibold"
+                    >
+                      🚀 Otvori Portainer
+                    </a>
+                    
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="bg-green-600 p-4 rounded">
+                        <div className="text-2xl font-bold text-white">Docker</div>
+                        <div className="text-sm text-gray-200">Container Management</div>
+                      </div>
+                      <div className="bg-blue-600 p-4 rounded">
+                        <div className="text-2xl font-bold text-white">Images</div>
+                        <div className="text-sm text-gray-200">Docker Images</div>
+                      </div>
+                      <div className="bg-purple-600 p-4 rounded">
+                        <div className="text-2xl font-bold text-white">Networks</div>
+                        <div className="text-sm text-gray-200">Docker Networks</div>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
