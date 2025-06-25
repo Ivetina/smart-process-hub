@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import { Award, Brain, Briefcase, CheckCircle, Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Award, Brain, Briefcase, CheckCircle, Users, BookOpen, ArrowRight, Code } from 'lucide-react';
 
 const About = () => {
   return (
@@ -156,42 +155,38 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                name: "Ivica Baćak",
-                position: "Osnivač i CEO",
-                bio: "Stručnjak za AI rješenja s više od 30 godina iskustva u implementaciji IT rješenja za poslovne procese.",
-                image: "/lovable-uploads/c145af11-63bb-4c28-9fb5-a629c2e464ff.png"
-              },
-              {
-                name: "Ana Marić",
-                position: "CTO",
-                bio: "Doktorica računalnih znanosti s fokusom na machine learning i optimizaciju poslovnih procesa.",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
-              },
-              {
-                name: "Marko Kovač",
-                position: "Lead AI Consultant",
-                bio: "Specijalist za integraciju AI tehnologija u postojeće poslovne sustave i infrastrukturu.",
-                image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
-              }
-            ].map((member, index) => (
-              <div key={index} className="glass-card rounded-xl overflow-hidden hover-card">
-                <div className="aspect-[3/2]">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium text-sm mb-3">{member.position}</p>
-                  <p className="text-muted-foreground">{member.bio}</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="glass-card rounded-xl overflow-hidden hover-card">
+              <div className="aspect-[3/2]">
+                <img 
+                  src="/lovable-uploads/c145af11-63bb-4c28-9fb5-a629c2e464ff.png" 
+                  alt="Ivica Baćak" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-1">Ivica Baćak</h3>
+                <p className="text-primary font-medium text-sm mb-3">Osnivač i CEO</p>
+                <p className="text-muted-foreground">Stručnjak za AI rješenja s više od 30 godina iskustva u implementaciji IT rješenja za poslovne procese.</p>
+              </div>
+            </div>
+            
+            <div className="glass-card rounded-xl overflow-hidden hover-card">
+              <div className="aspect-[3/2] bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <Code className="h-16 w-16 text-white" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-1">Implementirani projekti</h3>
+                <p className="text-primary font-medium text-sm mb-3">Uspješno realizirana rješenja</p>
+                <ul className="text-muted-foreground space-y-1">
+                  <li>• System Health Monitoring</li>
+                  <li>• N8N Automation Platform</li>
+                  <li>• Docker Management System</li>
+                  <li>• API Gateway Solutions</li>
+                  <li>• VPS Infrastructure Management</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
