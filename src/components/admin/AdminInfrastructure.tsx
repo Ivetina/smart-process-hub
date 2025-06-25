@@ -21,7 +21,7 @@ const AdminInfrastructure = () => {
     setLoginError('');
 
     // Check credentials
-    if (loginForm.username === 'admin' && loginForm.password === 'iSYwD6p0cXGR"s<9e;@.8F92s0Pg7e') {
+    if (loginForm.username === 'admin' && loginForm.password === '66Rockandroll') {
       setIsAuthenticated(true);
       sessionStorage.setItem('mybraindev_admin_auth', 'authenticated');
     } else {
