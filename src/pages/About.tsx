@@ -73,7 +73,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                  src="/lovable-uploads/af725b81-ba48-43ef-9892-0edcbcbfc36c.png" 
                   alt="Our team working" 
                   className="w-full h-full object-cover"
                 />
@@ -194,8 +194,12 @@ const About = () => {
             </div>
 
             <div className="glass-card rounded-xl overflow-hidden hover-card">
-              <div className="aspect-[3/2] bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
-                <Globe className="h-16 w-16 text-white" />
+              <div className="aspect-[3/2]">
+                <img 
+                  src="/lovable-uploads/af725b81-ba48-43ef-9892-0edcbcbfc36c.png" 
+                  alt="Globalna mreža partnera" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Globalna mreža partnera</h3>
