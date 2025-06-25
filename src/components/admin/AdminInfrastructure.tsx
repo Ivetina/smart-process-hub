@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Server, Eye, Database, LogOut } from 'lucide-react';
 import Hawkeye from '../../pages/Hawkeye';
@@ -18,7 +17,14 @@ const AdminInfrastructure = () => {
       name: 'Portainer',
       icon: <Server className="w-4 h-4" />,
       description: 'Docker Container Management',
-      component: <div className="p-8 text-center text-white">Portainer funkcionalnost će biti implementirana uskoro</div>
+      component: (
+        <iframe
+          src="http://162.55.36.239:9000"
+          className="w-full h-full border-0"
+          title="Portainer"
+          style={{ background: 'white' }}
+        />
+      )
     },
     {
       id: 'hawkeye',
