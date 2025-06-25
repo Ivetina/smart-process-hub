@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
@@ -172,8 +173,12 @@ const About = () => {
             </div>
             
             <div className="glass-card rounded-xl overflow-hidden hover-card">
-              <div className="aspect-[3/2] bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <Code className="h-16 w-16 text-white" />
+              <div className="aspect-[3/2]">
+                <img 
+                  src="/lovable-uploads/f9857324-d9c0-480a-9cbf-b7b7ed3cf54c.png" 
+                  alt="Implementirani projekti - kod" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-1">Implementirani projekti</h3>
