@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const HawkeyePage = () => {
+const HawkeyeComponent = () => {
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="container mx-auto p-8">
@@ -52,4 +52,4 @@ const HawkeyePage = () => {
   );
 };
 
-export default HawkeyePage;
+export default HawkeyeComponent;

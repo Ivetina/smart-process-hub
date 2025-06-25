@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Server, Eye, Database, LogOut } from 'lucide-react';
-import Hawkeye from '../../pages/Hawkeye';
-import ApiGateway from '../../pages/ApiGateway';
+import HawkeyeComponent from './HawkeyeComponent';
+import ApiGatewayComponent from './ApiGatewayComponent';
 
 const AdminInfrastructure = () => {
   const [activeTab, setActiveTab] = useState('portainer');
@@ -31,14 +31,14 @@ const AdminInfrastructure = () => {
       name: 'Hawkeye',
       icon: <Eye className="w-4 h-4" />,
       description: 'Infrastructure Monitoring',
-      component: <Hawkeye />
+      component: <HawkeyeComponent />
     },
     {
       id: 'apigateway',
       name: 'API Gateway',
       icon: <Database className="w-4 h-4" />,
       description: 'Supabase API Gateway',
-      component: <ApiGateway />
+      component: <ApiGatewayComponent />
     }
   ];
 

@@ -12,8 +12,6 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
-import Hawkeye from "./pages/Hawkeye";
-import ApiGateway from "./pages/ApiGateway";
 
 const queryClient = new QueryClient();
 
@@ -31,8 +29,6 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/hawkeye" element={<Hawkeye />} />
-          <Route path="/apigateway" element={<ApiGateway />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
