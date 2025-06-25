@@ -79,6 +79,40 @@ const Services = () => {
     }
   ];
 
+  // Technology tools showcased in our work
+  const technologyTools = [
+    {
+      name: "Uptime Kuma",
+      description: "Monitoring sustavi za aplikacije",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "n8n",
+      description: "Automatizacija workflow-a",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Supabase",
+      description: "Backend as a Service platforma",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Docker",
+      description: "Kontejnerizacija aplikacija",
+      image: "https://images.unsplash.com/photo-1605745341112-85968b19335a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "GitHub",
+      description: "Version control i DevOps",
+      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Cloudflare",
+      description: "CDN i sigurnost",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -154,6 +188,39 @@ const Services = () => {
           </div>
         </section>
       ))}
+
+      {/* Technology Tools Section */}
+      <section className="section-padding">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <span className="bg-blue-100 text-blue-800 rounded-full px-4 py-1 text-sm font-medium mb-3 inline-block">
+              Tehnologije koje koristimo
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Alati i platforme u našim projektima</h2>
+            <p className="text-muted-foreground text-lg">
+              Koristimo najsuvremenije tehnologije i alate za implementaciju naših AI rješenja.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {technologyTools.map((tool, index) => (
+              <div key={index} className="glass-card rounded-xl overflow-hidden hover-card">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={tool.image} 
+                    alt={`${tool.name} interface`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{tool.name}</h3>
+                  <p className="text-muted-foreground">{tool.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       
       {/* Process Section */}
       <section className="section-padding bg-gray-50">
