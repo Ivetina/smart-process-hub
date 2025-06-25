@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
-import { Award, Brain, Briefcase, CheckCircle, Users, BookOpen, ArrowRight, Code } from 'lucide-react';
+import { Award, Brain, Briefcase, CheckCircle, Users, BookOpen, ArrowRight, Code, Globe } from 'lucide-react';
 
 const About = () => {
   return (
@@ -156,7 +156,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             <div className="glass-card rounded-xl overflow-hidden hover-card">
               <div className="aspect-[3/2]">
                 <img 
@@ -190,6 +190,22 @@ const About = () => {
                   <li>• API Gateway Solutions</li>
                   <li>• VPS Infrastructure Management</li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-xl overflow-hidden hover-card">
+              <div className="aspect-[3/2] bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                <Globe className="h-16 w-16 text-white" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-1">Globalna mreža partnera</h3>
+                <p className="text-primary font-medium text-sm mb-3">Međunarodna suradnja</p>
+                <p className="text-muted-foreground">
+                  Tvrtka mybraindev surađuje s globalnom mrežom vrhunskih IT stručnjaka i AI eksperata. 
+                  Naši partneri aktivno sudjeluju u projektima diljem svijeta, donoseći bogato međunarodno 
+                  iskustvo, najnovija tehnološka rješenja i dubinsko znanje iz područja informacijskih 
+                  tehnologija i umjetne inteligencije.
+                </p>
               </div>
             </div>
           </div>
