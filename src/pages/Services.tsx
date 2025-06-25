@@ -81,33 +81,33 @@ const Services = () => {
   // Technology tools showcased in our work
   const technologyTools = [
     {
-      name: "Uptime Kuma",
-      description: "Monitoring sustavi za aplikacije",
+      name: "Monitoring sustavi za aplikacije",
+      description: "Praćenje dostupnosti i performansi vaših aplikacija u realnom vremenu",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
-      name: "n8n",
-      description: "Automatizacija workflow-a",
+      name: "Automatizacija workflow-a",
+      description: "Povezivanje i automatizacija različitih servisa bez programiranja",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
-      name: "Supabase",
-      description: "Backend as a Service platforma",
+      name: "Backend as a Service platforma",
+      description: "Brzo razvijanje aplikacija s ugrađenom bazom podataka i autentifikacijom",
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
-      name: "Docker",
-      description: "Kontejnerizacija aplikacija",
+      name: "Kontejnerizacija aplikacija",
+      description: "Pakiranje aplikacija za lakše deployment i skaliranje",
       image: "/lovable-uploads/e97a810f-c064-4266-b86b-9c6dc041ee3e.png"
     },
     {
-      name: "GitHub",
-      description: "Version control i DevOps",
+      name: "Version control i DevOps",
+      description: "Upravljanje kodom i automatizacija deployment procesa",
       image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
-      name: "Cloudflare",
-      description: "CDN i sigurnost",
+      name: "CDN i sigurnost",
+      description: "Brže učitavanje stranica i zaštita od cyber napada",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
