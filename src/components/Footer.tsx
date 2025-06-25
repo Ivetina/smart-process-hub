@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MessageSquare, Video, Linkedin, Twitter, Facebook } from 'lucide-react';
@@ -85,8 +84,6 @@ const Footer = () => {
                 { name: 'Razvoj AI poslovnih procesa', path: '/services#ai-business-processes' },
                 { name: 'Integracija AI servisa', path: '/services#ai-integration' },
                 { name: 'AI strategije za poslovanje', path: '/services#ai-strategy' },
-                { name: 'Pretplate na poslovne procese', path: '/shop#subscriptions' },
-                { name: 'Paketi konzultacija', path: '/shop#consultation-packages' },
               ].map((item, index) => (
                 <li key={index}>
                   <Link 
