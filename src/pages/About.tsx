@@ -161,7 +161,7 @@ const About = () => {
               {
                 name: "Ivica Baćak",
                 position: "Osnivač i CEO",
-                bio: "Stručnjak za AI s više od 10 godina iskustva u implementaciji AI rješenja za poslovne procese.",
+                bio: "Stručnjak za AI rješenja s više od 30 godina iskustva u implementaciji IT rješenja za poslovne procese.",
                 image: "/lovable-uploads/c145af11-63bb-4c28-9fb5-a629c2e464ff.png"
               },
               {
