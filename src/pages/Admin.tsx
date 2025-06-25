@@ -22,7 +22,7 @@ const Admin = () => {
 
   // Demo credentials - in a real app, these would be verified against a backend
   const DEMO_USERNAME = 'admin';
-  const DEMO_PASSWORD = 'password123';
+  const DEMO_PASSWORD = '66Rockandroll';
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
