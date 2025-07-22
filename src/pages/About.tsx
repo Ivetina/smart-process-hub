@@ -183,6 +183,8 @@ const About = () => {
                 <h3 className="text-xl font-bold mb-1">Implementirani projekti</h3>
                 <p className="text-primary font-medium text-sm mb-3">Uspješno realizirana rješenja</p>
                 <ul className="text-muted-foreground space-y-1">
+                  <li>• Your private secured ML LLM Servers</li>
+                  <li>• ML - Machine learning agents</li>
                   <li>• System Health Monitoring</li>
                   <li>• N8N Automation Platform</li>
                   <li>• Docker Management System</li>
